@@ -10,16 +10,19 @@ set(CMAKE_SHARED_LINKER_FLAGS
 add_library(
   rubiks
   SHARED
-  main.cpp
+  android_main.cpp
   android_native_app_glue.h
   android_native_app_glue.c
+  app.cpp
+  renderer.h
+  renderer.cpp
 )
 
 target_link_libraries(
   rubiks
   android
   EGL
-  GLESv1_CM
+  GLESv3
   log
 )
 
